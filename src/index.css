@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.scrolle::-webkit-scrollbar {
+    width: 1px;
+    /* padding: 1px; */
+    height: 5px;
+    /* width: 0; */
+  }
+  
+  /* Track */
+  .scrolle::-webkit-scrollbar-track {
+    background: #1A1C23;
+    width: 1px;
+    padding: 1px;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Handle */
+  .scrolle::-webkit-scrollbar-thumb {
+    background: #6d6d6dc0;
+    padding: 1px;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Handle on hover */
+  .scrolle::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .date{
+    color-scheme: dark;
+  }
+  .bggg{
+    
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='dimgray' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    /* width: 100%; */
+    width: 150px;
+    height: 150px;
+    aspect-ratio: 1;
+  }
+  .bgg{
+    
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='dimgray' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    width: 100%;
+    min-width: 150px;
+    
+  }
