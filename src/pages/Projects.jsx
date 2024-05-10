@@ -64,7 +64,7 @@ function Projects() {
                 <th className='py-1 px-2 w-20'>PROJECT DESCRIPTION</th>
                 <th className='py-1 px-2 w-20'>LEAD</th>
                 <th className='py-1 px-2 w-20'>PRIORITY</th>
-                {/* <th className='py-1 px-2 w-20'>TECH STACK</th> */}
+                <th className='py-1 px-2 w-20'>ENDS IN</th>
                 <th className='py-1 px-2 w-20'>START DATE</th>
                 <th className='py-1 px-2 w-20'>DUE DATE</th>
                 <th className='py-1 px-2 w-20'>STATUS</th>
@@ -80,7 +80,13 @@ function Projects() {
                 <td className='py-1 max-w-[100px] text-nowrap overflow-auto scrolle px-2 text-center'>{item.projectDesc}</td>
                 <td className='py-1 max-w-[100px] overflow-auto scrolle px-2 text-center'>{item.lead}</td>
                 <td className='py-1 max-w-[100px] overflow-auto scrolle px-2 text-center'>{item.priority}</td>
-                {/* <td className='py-1 max-w-[100px] overflow-auto scrolle px-2 text-center'>{item.techStack}</td> */}
+                <td className='py-1 max-w-[100px] overflow-auto scrolle px-2 text-center'>{
+                 
+                 (!(new Date(item.startDate) instanceof Date) || isNaN(new Date(item.startDate).getTime()) ||
+                 !(new Date(item.dueDate) instanceof Date) || isNaN(new Date(item.dueDate).getTime())) ?  "ERROR" :
+                    (Math.floor(Math.abs( new Date(item.startDate).getTime() - new Date(item.dueDate).getTime() )) / (1000 * 60 * 60 * 24)) 
+                  
+                }</td>
                 <td className='py-1 max-w-[100px] overflow-auto scrolle px-2 text-center'>{item.startDate}</td>
                 <td className='py-1 max-w-[100px] overflow-auto scrolle px-2 text-center'>{item.dueDate}</td>
                 <td className='py-1 max-w-[100px] overflow-auto scrolle px-2 text-center'>{item.status}</td>

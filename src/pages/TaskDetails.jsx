@@ -93,7 +93,7 @@ const handleNewSummary = async(e)=>{
   alert("Today's Summary Added!")
   setFirst(false)
 }
-console.log("datask detailta", prData);
+// console.log("datask detailta", prData);
   return (
     <div className='p-2 flex flex-col gap-4 max-w-[1500px] bg-[#121317]  mx-auto'>
       {

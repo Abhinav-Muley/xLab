@@ -125,7 +125,7 @@ function PendingTask({ taskClick, first }) {
           <thead className="text-sm h-9 border-b-[0.1px] border-[#51515161] ">
             <tr className="text-[13px]">
               <th className="w-[30%] text-left pl-5">TASK</th>
-              <th>START DATE</th>
+              <th>ENDS IN</th>
               <th>DUE DATE</th>
               <th>STATUS</th>
               <th>PRIORITY</th>
@@ -145,7 +145,15 @@ function PendingTask({ taskClick, first }) {
                   {i.taskDesc}
                   </NavLink>
                 </td>
-                <td className="text-center">{i.startdate}</td>
+                {/* <td className="text-center">{i.startdate}</td> */}
+                <td className="text-center">{
+                 
+                 (!(new Date(i.startdate) instanceof Date) || isNaN(new Date(i.startdate).getTime()) ||
+                 !(new Date(i.duedate) instanceof Date) || isNaN(new Date(i.duedate).getTime())) ?  "ERROR" :
+                    (Math.floor(Math.abs( new Date(i.startdate).getTime() - new Date(i.duedate).getTime() )) / (1000 * 60 * 60 * 24)) 
+                  
+                }</td>
+                
                 <td className="text-center">{i.duedate}</td>
                 <td className="text-center">{i.status}</td>
                 <td className="text-center">{i.priority}</td>

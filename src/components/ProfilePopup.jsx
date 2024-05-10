@@ -19,7 +19,7 @@ function ProfilePopup({ ele, setfirst }) {
 
     const fetchdata = async () => {
       const urlpic = await geturl(ele.email)
-      console.log(urlpic);
+      // console.log(urlpic);
       setUrl(urlpic)
     }
     // if(ele && urlprofile === "https://imgs.search.brave.com/Yc_k7oNnrlNy35kM5Zdq6JVEFB1YnbgR2xPUyKCJYh0/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9tYWxlLWZlbWFs/ZS1wcm9maWxlLWF2/YXRhci11c2VyLWF2/YXRhcnMtZ2VuZGVy/LWljb25zXzEwMjA4/NjctNzUwOTkuanBn/P3NpemU9NjI2JmV4/dD1qcGc"){
@@ -49,7 +49,7 @@ function ProfilePopup({ ele, setfirst }) {
       phone: e.target[7].value,
       address: e.target[8].value
     });
-    console.log(data);
+    // console.log(data);
     // }
     // else if(a[1].checked === true){
     //   await updateDoc(q, {

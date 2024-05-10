@@ -9,7 +9,7 @@ function ProfileCard({ele, setEle}) {
     useEffect(() => {
         const fetchdata = async()=>{
             const urlpic = await geturl(ele.email)
-            console.log( urlpic);
+            // console.log( urlpic);
             setUrl(urlpic)
         }
         fetchdata()

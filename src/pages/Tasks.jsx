@@ -42,6 +42,7 @@ function Tasks() {
                 <th className='py-1 px-2 w-20'>PROJECT NAME</th>
                 <th className='py-1 px-2 w-20'>TASK DESCRIPTION</th>
                 <th className='py-1 px-2 w-20'>LEAD</th>
+                <th className='py-1 px-2 w-20'>ENDS IN</th>
                 <th className='py-1 px-2 w-20'>EMPLOYEE</th>
                 <th className='py-1 px-2 w-20'>PRIORITY</th>
                 <th className='py-1 px-2 w-20'>START DATE</th>
@@ -58,6 +59,13 @@ function Tasks() {
                 <td className='py-1 max-w-[100px] overflow-auto scrolle px-2 text-center'>{item.project}</td>
                 <td className='py-1 max-w-[100px] overflow-auto scrolle px-2 text-center'>{item.taskDesc}</td>
                 <td className='py-1 max-w-[100px] overflow-auto scrolle px-2 text-center'>{item.caller}</td>
+                <td className='py-1 max-w-[100px] overflow-auto scrolle px-2 text-center'>{
+                 
+                 (!(new Date(item.startdate) instanceof Date) || isNaN(new Date(item.startdate).getTime()) ||
+                 !(new Date(item.duedate) instanceof Date) || isNaN(new Date(item.duedate).getTime())) ?  "ERROR" :
+                    (Math.floor(Math.abs( new Date(item.startdate).getTime() - new Date(item.duedate).getTime() )) / (1000 * 60 * 60 * 24)) 
+                  
+                }</td>
                 <td className='py-1 max-w-[100px] overflow-auto scrolle px-2 text-center'>{item.employee}</td>
                 <td className='py-1 max-w-[100px] overflow-auto scrolle px-2 text-center'>{item.priority}</td>
                 <td className='py-1 max-w-[100px] overflow-auto scrolle px-2 text-center'>{item.startdate}</td>

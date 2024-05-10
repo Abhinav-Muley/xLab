@@ -54,7 +54,7 @@ function PendingProjects({second,projectClick,projectClic}) {
     querySnapshot.forEach((doc) => {
       empp.push({...doc.data(), id:doc.id})
     });
-    console.log(empp);
+    // console.log(empp);
     setProjectLead(empp)
     }
     fetchedData()
@@ -138,6 +138,7 @@ const handleEditProject = async(e,id)=>{
                 <tr className='text-[13px]'>
                     <th className='w-[20%] text-left pl-5'>PROJECT</th>
                     <th>LEAD</th>
+                    <th>ENDS IN</th>
                     <th>DUE DATE</th>
                     <th>STATUS</th>
                     <th>PRIORITY</th>
@@ -158,6 +159,13 @@ const handleEditProject = async(e,id)=>{
                   </NavLink>
                       </td>
                     <td className='text-center'>{ele.lead}</td>
+                    <td className='text-center'>{
+                 
+                 (!(new Date(ele.startDate) instanceof Date) || isNaN(new Date(ele.startDate).getTime()) ||
+                 !(new Date(ele.dueDate) instanceof Date) || isNaN(new Date(ele.dueDate).getTime())) ?  "ERROR" :
+                    (Math.floor(Math.abs( new Date(ele.startDate).getTime() - new Date(ele.dueDate).getTime() )) / (1000 * 60 * 60 * 24)) 
+                  
+                }</td>
                     <td className='text-center'>{ele.dueDate}</td>
                     <td className='text-center'>{ele.status}</td>
                     <td className='text-center'>{ele.priority}</td>

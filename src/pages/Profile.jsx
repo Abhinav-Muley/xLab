@@ -50,7 +50,7 @@ function Profile() {
 
     }
     setData(emp)
-    console.log(emp.length, allEmployee.length);
+    // console.log(emp.length, allEmployee.length);
 
   }, [allEmployee])
   // console.log(data);

@@ -43,7 +43,7 @@ function Popup({first, taskClick }) {
     querySnapshot.forEach((doc) => {
       empp.push({...doc.data(), id:doc.id})
     });
-    console.log(empp);
+    // console.log(empp);
 
     setTechEmployees(empp)
     }
@@ -51,15 +51,15 @@ function Popup({first, taskClick }) {
   }, [allEmployee])
   
   const handleTechStackChange = async(e )=>{
-    console.log("sdfkjn");
-    console.log(e);
+    // console.log("sdfkjn");
+    // console.log(e);
     const empp = []
     const q = query(collection(db, "users"), where("techstack", "==", e), where("profile", "==", "employee"));
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
       empp.push({...doc.data(), id:doc.id})
     });
-    console.log(empp);
+    // console.log(empp);
     setTechEmployees(empp)
   }
   

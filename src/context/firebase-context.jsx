@@ -57,7 +57,7 @@ export const AuthContextProvider = (props) => {
     if (user) {
       setLoginLoader(true)
 
-      console.log("log place 1");
+      // console.log("log place 1");
       const q = query(collection(db, "users"), where("email", "==", user.email));
       const querySnapshot1 = await getDocs(q);
       querySnapshot1.forEach((doc) => {
@@ -76,7 +76,7 @@ export const AuthContextProvider = (props) => {
           alert("Your Account is Disable! \nKindly Contact your admin")
           location.reload();
         } else {
-      console.log("log place 2");
+      // console.log("log place 2");
 
           setname(doc.data().name)
           setCurrentUser({ ...user })
@@ -86,12 +86,12 @@ export const AuthContextProvider = (props) => {
           }else{
             setIsAdmin(false)
           }
-      console.log("log place 3");
+      // console.log("log place 3");
 
         }
       });
       
-      console.log("log place 4");
+      // console.log("log place 4");
 try {
   
   const storage = getStorage();
@@ -120,9 +120,9 @@ try {
       setCurrentUser(null)
       setLoggedIn(false)
     }
-    console.log("log place 5");
+    // console.log("log place 5");
     
-    console.log("log place 6");
+    // console.log("log place 6");
     setLoginLoader(false)
   }
   const getAllEmployeeProfiles = async (user) => {
@@ -131,16 +131,16 @@ try {
       const querySnapsho = await getDocs(dbas);
 
       // Array to store promises for all URL retrievals
-      console.log("employee profile");
+      // console.log("employee profile");
       let allUsers = []
       querySnapsho.forEach((doc) => {
         // if (doc.data().email === user.email && doc.data().profile === "admin") {
         //   // setIsAdmin(true)
         allUsers.push({ ...doc.data(), id: doc.id , url:"https://picsum.photos/200/200"})
         // }
-        console.log("=====> for each",doc.id);
+        // console.log("=====> for each",doc.id);
       });
-      console.log(allUsers);
+      // console.log(allUsers);
     //   getDownloadURL(ref(storage, `userProfile/${doc.data().email}/profile.jpg`))
     //  .then((url) => {
     //    console.log("====> getDownloadURL",url);
@@ -163,7 +163,7 @@ try {
         var profileUrl =""
       await  getDownloadURL(ref(storage, `userProfile/${email}/profile.jpg`))
         .then((url) => {
-            console.log("====> getDownloadURL",url);
+            // console.log("====> getDownloadURL",url);
             // `url` is the download URL for 'images/stars.jpg'
             profileUrl = url
             
@@ -181,7 +181,7 @@ try {
       let taskCount = 0
       let taskPending = 0
       let taskOnHold = 0
-      console.log("all tasks");
+      // console.log("all tasks");
       // const q = query(collection(db, "tasks"), where("capital", "==", true));
       const fetchedData = [];
       if (isAdmin) {
@@ -229,7 +229,7 @@ try {
     try {
       // let totalprojectcount = 0
       var allProjects = []
-      console.log("all projects");
+      // console.log("all projects");
       if (isAdmin) {
 
         const dba = collection(db, "Projects");
@@ -286,8 +286,8 @@ try {
     var address = e.target[8].value
     var password = e.target[5].value
     var img = img
-    console.log(profile, techstack,name, email, phone, designation, address, password, img);
-    console.log(auth.currentUser.email);
+    // console.log(profile, techstack,name, email, phone, designation, address, password, img);
+    // console.log(auth.currentUser.email);
     let adminmail = auth.currentUser.email
     let adminpassword = prompt("Enter your password")
     var cUser
@@ -392,7 +392,7 @@ try {
   }
 
   const addTask = async (taskDesc, caller, techstack, priority, employee, duedate, project) => {
-    console.log(taskDesc, caller, techstack, priority, employee, duedate, project);
+    // console.log(taskDesc, caller, techstack, priority, employee, duedate, project);
     try {
       let date = new Date().toJSON().slice(0, 10);
       const docRef = await addDoc(collection(db, "tasks"), {
@@ -431,7 +431,7 @@ try {
   }
   const addProject = async (projectName, projectDesc,lead, dueDate, priority, status) => {
     let date = new Date().toJSON().slice(0, 10);
-    console.log(projectName, projectDesc,lead, dueDate, priority, status);
+    // console.log(projectName, projectDesc,lead, dueDate, priority, status);
     try {
       const docRef = await addDoc(collection(db, "Projects"), {
 

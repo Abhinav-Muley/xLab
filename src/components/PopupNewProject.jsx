@@ -23,12 +23,12 @@ function PopupNewProject({setData,projectClick,projectClic, ele}) {
     querySnapshot.forEach((doc) => {
       empp.push({...doc.data(), id:doc.id})
     });
-    console.log(empp);
+    // console.log(empp);
     setProjectLead(empp)
     }
     fetchedData()
   }, [])
-console.log(currentUser.email);
+// console.log(currentUser.email);
  
   // console.log("inside project popup");
   return (
