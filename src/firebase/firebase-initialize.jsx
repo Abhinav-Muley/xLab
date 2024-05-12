@@ -4,14 +4,24 @@ import { collection, getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 import { useState } from "react";
 
-const firebaseConfig = {
-    apiKey: "AIzaSyC0njJDuPUkvSD21QbtYXBx-Buj1-vRhdU",
-    authDomain: "xlab-ee9ce.firebaseapp.com",
-    projectId: "xlab-ee9ce",
-    storageBucket: "xlab-ee9ce.appspot.com",
-    messagingSenderId: "39194323423",
-    appId: "1:39194323423:web:08b728a67c68199cc37c6a",
-    measurementId: "G-16MPGHFC6H"
+// const firebaseConfig = {
+//     apiKey: "AIzaSyC0njJDuPUkvSD21QbtYXBx-Buj1-vRhdU",
+//     authDomain: "xlab-ee9ce.firebaseapp.com",
+//     projectId: "xlab-ee9ce",
+//     storageBucket: "xlab-ee9ce.appspot.com",
+//     messagingSenderId: "39194323423",
+//     appId: "1:39194323423:web:08b728a67c68199cc37c6a",
+//     measurementId: "G-16MPGHFC6H"
+//   };
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCkpOQ1DhC66gBEQoOJZXuhUkTX9t8Qvr8",
+    authDomain: "projects2024-01.firebaseapp.com",
+    projectId: "projects2024-01",
+    storageBucket: "projects2024-01.appspot.com",
+    messagingSenderId: "988043040729",
+    appId: "1:988043040729:web:84ddd3e1a7fa53c1332bc8",
+    measurementId: "G-6RJDC39CKX"
   };
 // const firebaseConfig = {
 //   apiKey: "AIzaSyAawhgx2uZWaWEpYIiEzPfjhC9xDJhN-Tk",

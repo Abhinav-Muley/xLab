@@ -437,7 +437,7 @@ try {
 
         projectName: projectName,
         projectDesc: projectDesc,
-        lead,lead,
+        lead:lead,
         startDate: date,
         dueDate: dueDate,
         priority: priority,
