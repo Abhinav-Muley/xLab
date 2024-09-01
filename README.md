@@ -6,8 +6,6 @@ xLab is a single-page web application (SPA) designed to streamline task manageme
 
 # Screenshots
 
-![Screenshot 2024-09-01 200459](https://github.com/user-attachments/assets/81d22398-cabb-4000-b07b-6e05a73b7feb)
-![Screenshot 2024-09-01 200339](https://github.com/user-attachments/assets/02b93539-df61-4c88-b0c9-7eb843119e47)
 ![Screenshot (667)](https://github.com/user-attachments/assets/392df1af-377d-4e9c-99b5-23c02912c5d8)
 ![Screenshot 2024-09-01 195430](https://github.com/user-attachments/assets/c6a78c6f-fc7a-4b1b-9a71-707123ce9ea0)
 ![Screenshot 2024-09-01 195411](https://github.com/user-attachments/assets/fdbecadb-1aa0-4447-a0db-27dbcc51593c)
