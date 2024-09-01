@@ -41,7 +41,7 @@ Technology Stack
 Frontend: HTML, TailwindCSS, ReactJS
 Backend: Firebase Authentication, Firebase Firestore (NoSQL Database), Firebase Storage (for image storage)
 
-# Installation
+# 🛫 Installation
 *To run this project locally:
 
 - Clone the repository:
