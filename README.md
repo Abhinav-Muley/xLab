@@ -1,7 +1,5 @@
 # Xlab
 
-*Overview: -
-
 xLab is a single-page web application (SPA) designed to streamline task management and project oversight within an organization. Built using HTML, TailwindCSS, ReactJS+Vite, and it leverages Firebase for authentication, image storage, and a NoSQL database. xLab provides an intuitive platform for administrators to manage employees, assign tasks, and track project progress.
 
 # Screenshots
