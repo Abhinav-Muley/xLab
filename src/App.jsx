@@ -17,7 +17,7 @@ import { AuthContextProvider, useAuthContext } from './context/firebase-context.
 
 function App() {
   const AuthContext = useAuthContext()
-  const an =12;
+  
   const a=AuthContext.loggedIn
  
   // console.log(AuthContext.auth.currentUser);
