@@ -17,9 +17,9 @@ import { AuthContextProvider, useAuthContext } from './context/firebase-context.
 
 function App() {
   const AuthContext = useAuthContext()
-  // const { userLoggedIn } = useAuth()
+  
   const a=AuthContext.loggedIn
-  // console.log("app");
+ 
   // console.log(AuthContext.auth.currentUser);
   
   const [first, setfirst] = useState(false)
