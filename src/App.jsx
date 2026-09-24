@@ -21,6 +21,10 @@ function App() {
   const a=AuthContext.loggedIn
  
   // console.log(AuthContext.auth.currentUser);
+  // console.log(AuthContext.auth.currentUser);
+  // console.log(AuthContext.auth.currentUser);
+  // console.log(AuthContext.auth.currentUser);
+  // console.log(AuthContext.auth.currentUser);
   
   const [first, setfirst] = useState(false)
   const [second, setSecond] = useState(false)
