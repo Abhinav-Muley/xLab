@@ -17,7 +17,7 @@ import { AuthContextProvider, useAuthContext } from './context/firebase-context.
 
 function App() {
   const AuthContext = useAuthContext()
-  
+  const an =12;
   const a=AuthContext.loggedIn
  
   // console.log(AuthContext.auth.currentUser);
@@ -48,9 +48,9 @@ const handleLogin=()=>{
 }
 setTimeout(() => {
   <>
-  <div className="absolute top-0 left-0 right-0 bottom-0 backdrop-blur-lg ">
+  <div className="absolute top-0 bottom-0 left-0 right-0 backdrop-blur-lg ">
       </div>
-<div className="flex justify-center items-center">
+<div className="flex items-center justify-center">
 
         <div className=" border-t-[#6C2BD9] absolute w-16 h-16 border-[8px] rounded-full transition-transform rotate-[360] top-[40%] left-[55%] ease-in-out  animate-spin ">
 
@@ -70,9 +70,9 @@ setTimeout(() => {
     <Header handleClick={handleClick} handleLogin={handleLogin}/>
     <Sidebar w={second}/>
     {AuthContext.loginLoader && <>
-      <div className="absolute top-0 left-0 right-0 bottom-0 backdrop-blur-md ">
+      <div className="absolute top-0 bottom-0 left-0 right-0 backdrop-blur-md ">
       </div>
-<div className="flex justify-center items-center">
+<div className="flex items-center justify-center">
 
         <div className=" border-t-[#6C2BD9] absolute w-16 h-16 border-[8px] rounded-full transition-transform rotate-[360] top-[40%] left-[55%] ease-in-out  animate-spin ">
 
